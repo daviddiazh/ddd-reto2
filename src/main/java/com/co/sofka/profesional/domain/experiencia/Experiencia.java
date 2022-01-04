@@ -2,14 +2,12 @@ package com.co.sofka.profesional.domain.experiencia;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.domain.generic.Identity;
 import com.co.sofka.profesional.domain.experiencia.events.NuevaExperienciaLaboralAgregada;
 import com.co.sofka.profesional.domain.experiencia.events.PeriodoExperienciaLaboralActualizada;
 import com.co.sofka.profesional.domain.experiencia.values.*;
 import com.co.sofka.profesional.domain.generics.HojaDeVidaId;
-import com.co.sofka.profesional.domain.perfil.Perfil;
-import com.co.sofka.profesional.domain.perfil.PerfilChange;
-import com.co.sofka.profesional.domain.perfil.values.IdPerfil;
+import com.co.sofka.profesional.domain.generics.Institucion;
+import com.co.sofka.profesional.domain.generics.Periodo;
 
 import java.util.List;
 import java.util.Objects;
@@ -37,7 +35,7 @@ public class Experiencia extends AggregateEvent<IdExperiencia> {
         return experiencia;
     }
 
-    public void agregarExperienciaLaboral(IdExperienciaLaboral idExperienciaLaboral,Institucion institucion, Periodo periodo, Set<ConocimientosAdquiridos> conocimientosAdquiridos){
+    public void agregarExperienciaLaboral(IdExperienciaLaboral idExperienciaLaboral, Institucion institucion, Periodo periodo, Set<ConocimientosAdquiridos> conocimientosAdquiridos){
         var id = new IdExperiencia();
         Objects.requireNonNull(idExperienciaLaboral);
         Objects.requireNonNull(institucion);

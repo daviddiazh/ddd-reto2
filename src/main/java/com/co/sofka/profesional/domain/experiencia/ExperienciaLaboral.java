@@ -3,8 +3,8 @@ package com.co.sofka.profesional.domain.experiencia;
 import co.com.sofka.domain.generic.Entity;
 import com.co.sofka.profesional.domain.experiencia.values.ConocimientosAdquiridos;
 import com.co.sofka.profesional.domain.experiencia.values.IdExperienciaLaboral;
-import com.co.sofka.profesional.domain.experiencia.values.Institucion;
-import com.co.sofka.profesional.domain.experiencia.values.Periodo;
+import com.co.sofka.profesional.domain.generics.Institucion;
+import com.co.sofka.profesional.domain.generics.Periodo;
 
 import java.util.Objects;
 import java.util.Set;

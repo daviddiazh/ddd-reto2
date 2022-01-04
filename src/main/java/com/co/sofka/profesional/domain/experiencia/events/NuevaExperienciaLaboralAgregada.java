@@ -2,6 +2,8 @@ package com.co.sofka.profesional.domain.experiencia.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import com.co.sofka.profesional.domain.experiencia.values.*;
+import com.co.sofka.profesional.domain.generics.Institucion;
+import com.co.sofka.profesional.domain.generics.Periodo;
 
 import java.util.Set;
 
