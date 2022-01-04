@@ -1,4 +1,4 @@
-package com.co.sofka.profesional.domain.perfil.values;
+package com.co.sofka.profesional.domain.generics;
 
 import co.com.sofka.domain.generic.ValueObject;
 
@@ -10,10 +10,10 @@ public class NombreCompleto implements ValueObject<String> {
 
     public NombreCompleto(String value){
         this.value = Objects.requireNonNull(value);
-        if(value.isBlank()){
+        if(this.value.isBlank()){
             throw new IllegalArgumentException("El nombre completo no puede estar vacío.");
         }
-        if(value.length() > 5){
+        if(this.value.length() > 5){
             throw new IllegalArgumentException("El nombre completo debe contener más de 5 letras.");
         }
     }
