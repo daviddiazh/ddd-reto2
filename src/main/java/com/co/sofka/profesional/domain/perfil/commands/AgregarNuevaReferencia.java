@@ -9,13 +9,13 @@ import com.co.sofka.profesional.domain.perfil.values.ReferenciaId;
 public class AgregarNuevaReferencia extends Command {
 
     private final ReferenciaId referenciaId;
-    private final Cedula id;
+    private final Cedula cedula;
     private final NombreCompleto nombreCompleto;
     private final InformacionContacto informacionContacto;
 
     public AgregarNuevaReferencia(ReferenciaId referenciaId, Cedula id, NombreCompleto nombreCompleto, InformacionContacto informacionContacto) {
         this.referenciaId = referenciaId;
-        this.id = id;
+        this.cedula = id;
         this.nombreCompleto = nombreCompleto;
         this.informacionContacto = informacionContacto;
     }
@@ -24,8 +24,8 @@ public class AgregarNuevaReferencia extends Command {
         return referenciaId;
     }
 
-    public Cedula getId() {
-        return id;
+    public Cedula getCedula() {
+        return cedula;
     }
 
     public NombreCompleto getNombreCompleto() {

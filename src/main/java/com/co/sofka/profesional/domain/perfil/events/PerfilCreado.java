@@ -13,17 +13,13 @@ public class PerfilCreado extends DomainEvent {
 
     private final HojaDeVidaId hojaDeVidaId;
     private final InformacionContacto informacionContacto;
-    private final NombreCompleto nombreCompleto;
-    private final Cedula cedula;
     private final FotoPerfil fotoPerfil;
 
 
-    public PerfilCreado(HojaDeVidaId hojaDeVidaId, InformacionContacto informacionContacto, NombreCompleto nombreCompleto, Cedula cedula, FotoPerfil fotoPerfil) {
+    public PerfilCreado(HojaDeVidaId hojaDeVidaId, InformacionContacto informacionContacto, FotoPerfil fotoPerfil) {
         super("sofka.perfil.perfilcreado");
         this.hojaDeVidaId = hojaDeVidaId;
         this.informacionContacto = informacionContacto;
-        this.nombreCompleto = nombreCompleto;
-        this.cedula = cedula;
         this.fotoPerfil = fotoPerfil;
     }
 
@@ -33,14 +29,6 @@ public class PerfilCreado extends DomainEvent {
 
     public InformacionContacto getInformacionContacto() {
         return informacionContacto;
-    }
-
-    public NombreCompleto getNombreCompleto() {
-        return nombreCompleto;
-    }
-
-    public Cedula getCedula() {
-        return cedula;
     }
 
     public FotoPerfil getFotoPerfil() {
