@@ -1,9 +1,9 @@
 package com.co.sofka.profesional.domain.perfil.commands;
 
 import co.com.sofka.domain.generic.Command;
-import com.co.sofka.profesional.domain.generics.Cedula;
+import com.co.sofka.profesional.domain.perfil.values.Cedula;
 import com.co.sofka.profesional.domain.generics.HojaDeVidaId;
-import com.co.sofka.profesional.domain.generics.NombreCompleto;
+import com.co.sofka.profesional.domain.perfil.values.NombreCompleto;
 import com.co.sofka.profesional.domain.perfil.values.FotoPerfil;
 import com.co.sofka.profesional.domain.perfil.values.IdPerfil;
 import com.co.sofka.profesional.domain.perfil.values.InformacionContacto;

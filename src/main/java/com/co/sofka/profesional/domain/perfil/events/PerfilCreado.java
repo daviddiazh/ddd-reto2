@@ -1,13 +1,9 @@
 package com.co.sofka.profesional.domain.perfil.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.co.sofka.profesional.domain.generics.Cedula;
 import com.co.sofka.profesional.domain.generics.HojaDeVidaId;
-import com.co.sofka.profesional.domain.generics.NombreCompleto;
 import com.co.sofka.profesional.domain.perfil.values.FotoPerfil;
 import com.co.sofka.profesional.domain.perfil.values.InformacionContacto;
-
-import java.util.UUID;
 
 public class PerfilCreado extends DomainEvent {
 

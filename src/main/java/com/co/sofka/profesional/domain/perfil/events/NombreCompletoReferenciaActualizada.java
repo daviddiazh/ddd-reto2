@@ -1,10 +1,8 @@
 package com.co.sofka.profesional.domain.perfil.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.co.sofka.profesional.domain.generics.NombreCompleto;
+import com.co.sofka.profesional.domain.perfil.values.NombreCompleto;
 import com.co.sofka.profesional.domain.perfil.values.ReferenciaId;
-
-import java.util.UUID;
 
 public class NombreCompletoReferenciaActualizada extends DomainEvent {
 

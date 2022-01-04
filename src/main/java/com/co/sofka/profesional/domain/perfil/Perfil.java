@@ -2,9 +2,9 @@ package com.co.sofka.profesional.domain.perfil;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import com.co.sofka.profesional.domain.generics.Cedula;
+import com.co.sofka.profesional.domain.perfil.values.Cedula;
 import com.co.sofka.profesional.domain.generics.HojaDeVidaId;
-import com.co.sofka.profesional.domain.generics.NombreCompleto;
+import com.co.sofka.profesional.domain.perfil.values.NombreCompleto;
 import com.co.sofka.profesional.domain.perfil.events.NombreCompletoReferenciaActualizada;
 import com.co.sofka.profesional.domain.perfil.events.NuevaReferenciaAgregada;
 import com.co.sofka.profesional.domain.perfil.events.PerfilCreado;
@@ -39,9 +39,9 @@ public class Perfil extends AggregateEvent<IdPerfil> {
     }
 
     public static Perfil from(IdPerfil entityId, List<DomainEvent> events){
-        var paciente = new Perfil(entityId);
-        events.forEach(paciente::applyEvent);
-        return paciente;
+        var perfil = new Perfil(entityId);
+        events.forEach(perfil::applyEvent);
+        return perfil;
     }
 
     public void agregarNuevaReferencia(Cedula cedula, NombreCompleto nombreCompleto, InformacionContacto informacionContacto){

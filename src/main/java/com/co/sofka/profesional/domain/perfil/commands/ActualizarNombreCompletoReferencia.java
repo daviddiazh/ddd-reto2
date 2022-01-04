@@ -1,8 +1,7 @@
 package com.co.sofka.profesional.domain.perfil.commands;
 
 import co.com.sofka.domain.generic.Command;
-import com.co.sofka.profesional.domain.generics.NombreCompleto;
-import com.co.sofka.profesional.domain.perfil.Referencia;
+import com.co.sofka.profesional.domain.perfil.values.NombreCompleto;
 import com.co.sofka.profesional.domain.perfil.values.IdPerfil;
 import com.co.sofka.profesional.domain.perfil.values.ReferenciaId;
 

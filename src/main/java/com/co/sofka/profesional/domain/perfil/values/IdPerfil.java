@@ -13,4 +13,8 @@ public class IdPerfil extends Identity {
 
     }
 
+    public static IdPerfil of(String id){
+        return new IdPerfil(id);
+    }
+
 }

@@ -1,8 +1,8 @@
 package com.co.sofka.profesional.domain.perfil;
 
 import co.com.sofka.domain.generic.Entity;
-import com.co.sofka.profesional.domain.generics.Cedula;
-import com.co.sofka.profesional.domain.generics.NombreCompleto;
+import com.co.sofka.profesional.domain.perfil.values.Cedula;
+import com.co.sofka.profesional.domain.perfil.values.NombreCompleto;
 import com.co.sofka.profesional.domain.perfil.values.InformacionContacto;
 import com.co.sofka.profesional.domain.perfil.values.ReferenciaId;
 
