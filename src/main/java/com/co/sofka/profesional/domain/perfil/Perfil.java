@@ -22,8 +22,8 @@ public class Perfil extends AggregateEvent<IdPerfil> {
     protected InformacionContacto informacionContacto;
     protected Cedula cedula;
     protected FotoPerfil fotoPerfil;
-    private ReferenciaId referenciaId;
-    private NombreCompleto nombreCompleto;
+    protected Referencia referencia;
+
 
     public Perfil(IdPerfil entityId, HojaDeVidaId hojaDeVidaId, InformacionContacto informacionContacto, FotoPerfil fotoPerfil) {
         super(entityId);
@@ -53,8 +53,8 @@ public class Perfil extends AggregateEvent<IdPerfil> {
     }
 
     public void actualizarNombreCompletoReferencia(ReferenciaId referenciaId, NombreCompleto nombreCompleto){
-        this.referenciaId = Objects.requireNonNull(referenciaId);
-        this.nombreCompleto = Objects.requireNonNull(nombreCompleto);
+        referenciaId = Objects.requireNonNull(referenciaId);
+        nombreCompleto = Objects.requireNonNull(nombreCompleto);
         appendChange(new NombreCompletoReferenciaActualizada(referenciaId, nombreCompleto)).apply();
     }
 
@@ -72,14 +72,6 @@ public class Perfil extends AggregateEvent<IdPerfil> {
 
     public FotoPerfil fotoPerfil() {
         return fotoPerfil;
-    }
-
-    public ReferenciaId referenciaId() {
-        return referenciaId;
-    }
-
-    public NombreCompleto nombreCompleto() {
-        return nombreCompleto;
     }
 
 }
