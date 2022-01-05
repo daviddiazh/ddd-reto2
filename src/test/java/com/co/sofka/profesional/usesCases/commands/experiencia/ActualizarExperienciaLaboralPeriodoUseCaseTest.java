@@ -1,5 +1,6 @@
 package com.co.sofka.profesional.usesCases.commands.experiencia;
 
+import co.com.sofka.business.generic.BusinessException;
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
@@ -34,36 +35,60 @@ class ActualizarExperienciaLaboralPeriodoUseCaseTest {
     @Test
     void actualizarExperienciaLaboralPeriodoUseCaseTest() {
         //Arrange
-        IdExperiencia experienciaId;
-        experienciaId = IdExperiencia.of("1");
+        IdExperiencia idExperiencia;
+        idExperiencia = IdExperiencia.of("1");
 
-        IdExperienciaLaboral experienciaLaboralId;
-        experienciaLaboralId = IdExperienciaLaboral.of("xxxx");
+        IdExperienciaLaboral idExperienciaLaboral;
+        idExperienciaLaboral = IdExperienciaLaboral.of("xxxx");
 
-        var command = new ActualizarExperienciaLaboralPeriodo(experienciaId, experienciaLaboralId, new Periodo("2021/02/02 - 2021/12/31"));
+        var command = new ActualizarExperienciaLaboralPeriodo(idExperiencia, idExperienciaLaboral, new Periodo("3"));
         var useCase = new ActualizarExperienciaLaboralPeriodoUseCase();
 
         //Act
-        when(repository.getEventsBy(experienciaId.toString())).thenReturn(eventList());
+        when(repository.getEventsBy(idExperiencia.toString())).thenReturn(eventList());
         useCase.addRepository(repository);
 
         var events = UseCaseHandler.getInstance()
-                .setIdentifyExecutor(experienciaId.toString())
+                .setIdentifyExecutor(idExperiencia.toString())
                 .syncExecutor(useCase, new RequestCommand<>(command))
                 .orElseThrow();
 
         //Assert
         var event =  (PeriodoExperienciaLaboralActualizada)events.getDomainEvents().get(0);
         Assertions.assertEquals("xxxx", event.getIdExperienciaLaboral().value());
-        Assertions.assertEquals("2021/02/02 - 2021/12/31", event.getPeriodo().value());
+        Assertions.assertEquals("3", event.getPeriodo().value());
+    }
+
+    @Test
+    void actualizarExperienciaLaboralPeriodo_errorPeriodoMuyLargo() {
+        //Arrange
+        IdExperiencia idExperiencia;
+        idExperiencia = IdExperiencia.of("1");
+
+        IdExperienciaLaboral idExperienciaLaboral;
+        idExperienciaLaboral = IdExperienciaLaboral.of("xxxx");
+
+        var command = new ActualizarExperienciaLaboralPeriodo(idExperiencia, idExperienciaLaboral, new Periodo("1000"));
+        var useCase = new ActualizarExperienciaLaboralPeriodoUseCase();
+
+        //Act
+        when(repository.getEventsBy(idExperiencia.toString())).thenReturn(eventList());
+        useCase.addRepository(repository);
+
+        Assertions.assertThrows(BusinessException.class, () -> {
+            UseCaseHandler.getInstance()
+                    .setIdentifyExecutor(idExperiencia.value())
+                    .syncExecutor(useCase, new RequestCommand<>(command))
+                    .orElseThrow();
+        });
     }
 
     private List<DomainEvent> eventList(){
         return List.of(new ExperienciaCreada(new HojaDeVidaId("cvxxx")),
                 new NuevaExperienciaLaboralAgregada(IdExperienciaLaboral.of("xxxx"),
-                        new Institucion("Play the kids"),
-                        new Periodo("2021/01/01 - 2021/12/31"),
-                        new ConocimientosAdquiridos("Asesor ventas")
+                        new Institucion("SofkaU"),
+                        new Periodo("1"),
+                        new ConocimientosAdquiridos("Programacion")
                 ));
     }
 

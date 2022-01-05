@@ -31,7 +31,7 @@ public class Educacion extends Entity<EducacionId> {
         this.tipo = Objects.requireNonNull(tipo);
     }
 
-    public TarjetaProfesional id() {
+    public TarjetaProfesional tarjetaProfesional() {
         return tarjetaProfesional;
     }
 

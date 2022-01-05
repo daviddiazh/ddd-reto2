@@ -13,16 +13,12 @@ public class CrearPerfil extends Command {
     private final IdPerfil idPerfil;
     private final HojaDeVidaId hojaDeVidaId;
     private final InformacionContacto informacionContacto;
-    private final NombreCompleto nombreCompleto;
-    private final Cedula cedula;
     private final FotoPerfil fotoPerfil;
 
-    public CrearPerfil(IdPerfil idPerfil, HojaDeVidaId hojaDeVidaId, InformacionContacto informacionContacto, NombreCompleto nombreCompleto, Cedula cedula, FotoPerfil fotoPerfil) {
+    public CrearPerfil(IdPerfil idPerfil, HojaDeVidaId hojaDeVidaId, InformacionContacto informacionContacto, FotoPerfil fotoPerfil) {
         this.idPerfil = idPerfil;
         this.hojaDeVidaId = hojaDeVidaId;
         this.informacionContacto = informacionContacto;
-        this.nombreCompleto = nombreCompleto;
-        this.cedula = cedula;
         this.fotoPerfil = fotoPerfil;
     }
 
@@ -36,14 +32,6 @@ public class CrearPerfil extends Command {
 
     public InformacionContacto getInformacionContacto() {
         return informacionContacto;
-    }
-
-    public NombreCompleto getNombreCompleto() {
-        return nombreCompleto;
-    }
-
-    public Cedula getCedula() {
-        return cedula;
     }
 
     public FotoPerfil getFotoPerfil() {

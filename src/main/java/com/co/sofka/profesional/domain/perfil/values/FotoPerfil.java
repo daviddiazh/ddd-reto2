@@ -13,9 +13,6 @@ public class FotoPerfil implements ValueObject<String> {
         if(path.isBlank()){
             throw new IllegalArgumentException("La ruta no puede estar vacía.");
         }
-        if(!path.contains("https://")){
-            throw new IllegalArgumentException("La URL debe contener el protocolo HTTPS");
-        }
     }
 
     @Override

@@ -13,7 +13,5 @@ Msrc/main/java/com/co/sofka/profesional/domain/perfil/values/ReferenciaId.java,
 Ysrc/main/java/com/co/sofka/profesional/domain/perfil/commands/AgregarNuevaReferencia.java,7/c/7c1902d0036bdfc537a0c070718646b50d857cb3
 y
 Isrc/main/java/com/co/sofka/profesional/domain/perfil/values/IdPerfil.java,0/e/0e5c955f3618d6a98a3b174fdb04749e5b18ae17
-
-Osrc/main/java/com/co/sofka/profesional/domain/perfil/values/NombreCompleto.java,e/a/ea7c912eaec9c88b89b7c3cf1141919250dd2e82
 „
 Tsrc/main/java/com/co/sofka/profesional/domain/perfil/values/InformacionContacto.java,5/1/51a058e0518f5d1fd699dcd4733d67f79afc5382

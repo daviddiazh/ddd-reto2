@@ -33,7 +33,7 @@ public class Institucion implements ValueObject<String> {
 
     @Override
     public String value() {
-        return null;
+        return value;
     }
 
 }

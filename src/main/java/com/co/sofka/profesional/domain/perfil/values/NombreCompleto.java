@@ -13,7 +13,7 @@ public class NombreCompleto implements ValueObject<String> {
         if(this.value.isBlank()){
             throw new IllegalArgumentException("El nombre completo no puede estar vacío.");
         }
-        if(this.value.length() > 5){
+        if(this.value.length() < 5){
             throw new IllegalArgumentException("El nombre completo debe contener más de 5 letras.");
         }
     }
