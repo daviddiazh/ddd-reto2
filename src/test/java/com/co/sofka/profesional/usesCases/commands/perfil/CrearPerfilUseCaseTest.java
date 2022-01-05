@@ -46,7 +46,7 @@ public class CrearPerfilUseCaseTest {
         IdPerfil idPerfil = IdPerfil.of("xxxx");
         HojaDeVidaId hojaDeVidaId = new HojaDeVidaId("cvxxx");
         InformacionContacto informacionContacto = new InformacionContacto("123456789");
-        FotoPerfil fotoPerfil = new FotoPerfil("C:/Users/123/fotoperfil");
+        FotoPerfil fotoPerfil = new FotoPerfil("C:/Users/123/foto");
 
         var command = new CrearPerfil(idPerfil, hojaDeVidaId, informacionContacto, fotoPerfil);
         var useCase = new CrearPerfilUseCase();

@@ -1,0 +1,15 @@
+
+H
+java:S2160"+Override the "equals" method in this class.(ÙÁÜ»8¬È‰Áâ/
+g
+java:S1128"JRemove this unused import 'com.co.sofka.profesional.domain.perfil.Perfil'.(¼úÿû8¾ê‹Áâ/
+r
+java:S1128"PRemove this unused import 'com.co.sofka.profesional.domain.perfil.PerfilChange'.(Ü½•îùÿÿÿÿ8¾ê‹Áâ/
+y
+java:S1128"WRemove this unused import 'com.co.sofka.profesional.domain.perfil.events.PerfilCreado'.(“œÔ¸úÿÿÿÿ8¿ê‹Áâ/
+r
+java:S1128"URemove this unused import 'com.co.sofka.profesional.domain.perfil.values.FotoPerfil'.(ÁÃŒô8¿ê‹Áâ/
+u
+java:S1128"SRemove this unused import 'com.co.sofka.profesional.domain.perfil.values.IdPerfil'.(×È®¾úÿÿÿÿ8¿ê‹Áâ/
+{
+java:S1128"^Remove this unused import 'com.co.sofka.profesional.domain.perfil.values.InformacionContacto'.(þ¼¾Ì8¿ê‹Áâ/

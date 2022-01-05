@@ -17,17 +17,9 @@ public class ActualizarNombreCompletoReferenciaUseCase extends UseCase<RequestCo
 
         Perfil perfil;
 
-        perfil = new Perfil(
-                new IdPerfil(),
-                new HojaDeVidaId("cvxxx"),
-                new InformacionContacto("123456789"),
-                new FotoPerfil("hhtps://ruta.com")
-        );
-
-        perfil.agregarNuevaReferencia(
-                new Cedula("123456789"),
-                new NombreCompleto("David Diaz"),
-                new InformacionContacto("111111111")
+        perfil = Perfil.from(
+                command.getIdPerfil(),
+                retrieveEvents()
         );
 
         perfil.actualizarNombreCompletoReferencia(

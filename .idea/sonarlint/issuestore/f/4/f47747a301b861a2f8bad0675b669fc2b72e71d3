@@ -1,0 +1,10 @@
+
+h
+java:S6206
+"KRefactor this class declaration to use 'record HojaDeVidaId(String value)'.(¾½¦´8©¨üšâ/
+c
+java:S1128"ARemove this unused import 'co.com.sofka.domain.generic.Identity'.(ñ¬Ÿ¡ùÿÿÿÿ8¡‹íÀâ/
+y
+java:S1128"WRemove this unused import 'com.co.sofka.profesional.domain.perfil.values.ReferenciaId'.(à—Žóþÿÿÿÿ8¡‹íÀâ/
+P
+java:S1128".Remove this unused import 'jdk.jfr.Frequency'.(°ªðîøÿÿÿÿ8¡‹íÀâ/
