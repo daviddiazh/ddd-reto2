@@ -12,9 +12,9 @@ public class NuevaExperienciaLaboralAgregada extends DomainEvent {
     private IdExperienciaLaboral id;
     private Institucion institucion;
     private Periodo periodo;
-    private Set<ConocimientosAdquiridos> conocimientosAdquiridos;
+    private ConocimientosAdquiridos conocimientosAdquiridos;
 
-    public NuevaExperienciaLaboralAgregada(IdExperienciaLaboral id, Institucion institucion, Periodo periodo, Set<ConocimientosAdquiridos> conocimientosAdquiridos) {
+    public NuevaExperienciaLaboralAgregada(IdExperienciaLaboral id, Institucion institucion, Periodo periodo, ConocimientosAdquiridos conocimientosAdquiridos) {
         super("sofka.experiencia.nuevaexperiencialaboralagregada");
         this.id = id;
         this.institucion = institucion;
@@ -34,7 +34,7 @@ public class NuevaExperienciaLaboralAgregada extends DomainEvent {
         return periodo;
     }
 
-    public Set<ConocimientosAdquiridos> getConocimientosAdquiridos() {
+    public ConocimientosAdquiridos getConocimientosAdquiridos() {
         return conocimientosAdquiridos;
     }
 }

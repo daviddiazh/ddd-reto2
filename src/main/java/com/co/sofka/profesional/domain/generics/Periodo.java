@@ -16,9 +16,9 @@ public class Periodo implements ValueObject<String> {
         if(this.value.length() > 25){
             throw new IllegalArgumentException("El periodo no puede tener más de veinti cinco caracteres");
         }
-        if (!this.value.matches("[/s][-][/][0-9]*")){
+        /*if (!this.value.matches("[/s][-][/][0-9]*")){
             throw new IllegalArgumentException("El periodo sólo puede incluir números y algunos caracteres especiales. Y seguir el siguiente formato: yyyy/mm/dd - yyyy/mm/dd");
-        }
+        }*/
     }
 
     @Override
@@ -36,7 +36,7 @@ public class Periodo implements ValueObject<String> {
 
     @Override
     public String value() {
-        return null;
+        return value;
     }
 
 }

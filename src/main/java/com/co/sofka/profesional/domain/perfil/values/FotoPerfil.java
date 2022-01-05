@@ -33,7 +33,7 @@ public class FotoPerfil implements ValueObject<String> {
 
     @Override
     public String value() {
-        return null;
+        return path;
     }
 
 }

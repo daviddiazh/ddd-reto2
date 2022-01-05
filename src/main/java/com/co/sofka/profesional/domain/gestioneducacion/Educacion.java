@@ -27,7 +27,7 @@ public class Educacion extends Entity<EducacionId> {
         this.periodo = periodo;
     }
 
-    public void actualizarTipo(Tipo tipo){
+    public void actualizarTipoEducacion(Tipo tipo){
         this.tipo = Objects.requireNonNull(tipo);
     }
 

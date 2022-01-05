@@ -2,6 +2,7 @@ package com.co.sofka.profesional.domain.experiencia;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import com.co.sofka.profesional.domain.experiencia.events.ExperienciaCreada;
 import com.co.sofka.profesional.domain.experiencia.events.NuevaExperienciaLaboralAgregada;
 import com.co.sofka.profesional.domain.experiencia.events.PeriodoExperienciaLaboralActualizada;
 import com.co.sofka.profesional.domain.experiencia.values.*;
@@ -18,10 +19,10 @@ public class Experiencia extends AggregateEvent<IdExperiencia> {
     protected ExperienciaLaboral experienciaLaboral;
     protected HojaDeVidaId hojaDeVidaId;
 
-    public Experiencia(IdExperiencia entityId, ExperienciaLaboral experienciaLaboral, HojaDeVidaId hojaDeVidaId) {
+    public Experiencia(IdExperiencia entityId, HojaDeVidaId hojaDeVidaId) {
         super(entityId);
-        this.experienciaLaboral = Objects.requireNonNull(experienciaLaboral);
         this.hojaDeVidaId = Objects.requireNonNull(hojaDeVidaId);
+        appendChange(new ExperienciaCreada(hojaDeVidaId)).apply();
     }
 
     public Experiencia(IdExperiencia idExperiencia) {
@@ -35,13 +36,13 @@ public class Experiencia extends AggregateEvent<IdExperiencia> {
         return experiencia;
     }
 
-    public void agregarExperienciaLaboral(IdExperienciaLaboral idExperienciaLaboral, Institucion institucion, Periodo periodo, Set<ConocimientosAdquiridos> conocimientosAdquiridos){
-        var id = new IdExperiencia();
-        Objects.requireNonNull(idExperienciaLaboral);
+    public void agregarExperienciaLaboral(Institucion institucion, Periodo periodo, ConocimientosAdquiridos conocimientosAdquiridos){
+        var id = new IdExperienciaLaboral();
+        Objects.requireNonNull(id);
         Objects.requireNonNull(institucion);
         Objects.requireNonNull(periodo);
         Objects.requireNonNull(conocimientosAdquiridos);
-        appendChange(new NuevaExperienciaLaboralAgregada(idExperienciaLaboral ,institucion, periodo, conocimientosAdquiridos)).apply();
+        appendChange(new NuevaExperienciaLaboralAgregada(id, institucion, periodo, conocimientosAdquiridos)).apply();
     }
 
     public void actualizarExperienciaLaboralPeriodo(IdExperienciaLaboral idExperienciaLaboral, Periodo periodo){
