@@ -23,8 +23,6 @@ bsrc/main/java/com/co/sofka/profesional/domain/gestioneducacion/commands/CrearGe
 csrc/main/java/com/co/sofka/profesional/domain/gestioneducacion/events/TipoEducacionActualizada.java,4/c/4c88a764978bb280a8845f4b8fd75c71e207f750
 •
 esrc/main/java/com/co/sofka/profesional/domain/perfil/commands/ActualizarNombreCompletoReferencia.java,b/0/b0bb9b19152e396cdafd37a2ea6475a79698a59b
-‘
-asrc/main/java/com/co/sofka/profesional/domain/gestioneducacion/events/GestionEducacionCreada.java,8/6/8664a7dbea93d7c75e4a4c7e9d10c2a1a991352e
 s
 Csrc/main/java/com/co/sofka/profesional/domain/generics/Periodo.java,9/f/9f8e0d5db086ba6a74314dcaa5677428def87ded
 }
